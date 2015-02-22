@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
+  scope "/api" do
+    scope "/v1" do
+      resources :teams, only: [:index, :show]
+    end
+  end
+
   get '*path', to: 'home#index'
 
   # Example of regular route:
