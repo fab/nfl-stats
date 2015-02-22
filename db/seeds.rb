@@ -8,20 +8,20 @@
 
 sf = Team.create(name: '49ers', city: 'San Francisco', color_scheme: ['red', 'gold'])
 
-stat1  = Stat.create(title: 'Total Touchdowns Scored',      role: 'offense')
-stat2  = Stat.create(title: 'Passing Touchdowns Scored',    role: 'offense')
-stat3  = Stat.create(title: 'Rushing Touchdowns Scored',    role: 'offense')
-stat4  = Stat.create(title: 'Total Points Scored',          role: 'offense')
-stat5  = Stat.create(title: 'Defensive Touchdowns Allowed', role: 'offense')
+stat1  = Stat.create(title: 'Total Touchdowns Scored',      role: 'Offense')
+stat2  = Stat.create(title: 'Passing Touchdowns Scored',    role: 'Offense')
+stat3  = Stat.create(title: 'Rushing Touchdowns Scored',    role: 'Offense')
+stat4  = Stat.create(title: 'Total Points Scored',          role: 'Offense')
+stat5  = Stat.create(title: 'Defensive Touchdowns Allowed', role: 'Offense')
 
-stat6  = Stat.create(title: 'Total Touchdowns Allowed',     role: 'defense')
-stat7  = Stat.create(title: 'Passing Touchdowns Allowed',   role: 'defense')
-stat8  = Stat.create(title: 'Rushing Touchdowns Allowed',   role: 'defense')
-stat9  = Stat.create(title: 'Total Points Allowed',         role: 'defense')
-stat10 = Stat.create(title: 'Defensive Touchdowns Scored',  role: 'defense')
+stat6  = Stat.create(title: 'Total Touchdowns Allowed',     role: 'Defense')
+stat7  = Stat.create(title: 'Passing Touchdowns Allowed',   role: 'Defense')
+stat8  = Stat.create(title: 'Rushing Touchdowns Allowed',   role: 'Defense')
+stat9  = Stat.create(title: 'Total Points Allowed',         role: 'Defense')
+stat10 = Stat.create(title: 'Defensive Touchdowns Scored',  role: 'Defense')
 
-stat11 = Stat.create(title: 'Return Touchdowns Scored',     role: 'special teams')
-stat12 = Stat.create(title: 'Return Touchdowns Allowed',    role: 'special teams')
+stat11 = Stat.create(title: 'Return Touchdowns Scored',     role: 'Special Teams')
+stat12 = Stat.create(title: 'Return Touchdowns Allowed',    role: 'Special Teams')
 
 team_stat1  = TeamStat.create(team: sf, stat: stat1,  value: 33,  rank: 22)
 team_stat2  = TeamStat.create(team: sf, stat: stat2,  value: 20,  rank: 22)
