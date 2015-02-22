@@ -1,8 +1,8 @@
 class TeamsController < ApplicationController
   respond_to :json
-  
+
   def index
-    respond_with Team.all
+    respond_with Team.includes(:stats).all
   end
 
   def show
@@ -12,6 +12,6 @@ class TeamsController < ApplicationController
   private
 
   def team
-    Team.find(params[:id])
+    Team.includes(:stats).find(params[:id])
   end
 end
