@@ -2,7 +2,7 @@ class CreateStats < ActiveRecord::Migration
   def change
     create_table :stats do |t|
       t.string :title
-      t.string :type
+      t.string :role
 
       t.timestamps
     end

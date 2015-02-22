@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20150220173711) do
 
   create_table "stats", force: true do |t|
     t.string   "title"
-    t.string   "type"
+    t.string   "role"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
