@@ -37,3 +37,45 @@ team_stat10 = TeamStat.create(team: sf, stat: stat10, value: 3,   rank: 6)
 
 team_stat11 = TeamStat.create(team: sf, stat: stat11, value: 0,   rank: 13)
 team_stat12 = TeamStat.create(team: sf, stat: stat12, value: 1,   rank: 16)
+
+
+### SEED JUST THE TEAM NAMES FOR THE REST OF THE NFL ###
+
+team1  = Team.create(name: 'Patriots',   city: 'New England')
+team2  = Team.create(name: 'Bills',      city: 'Buffalo')
+team3  = Team.create(name: 'Dolphins',   city: 'Miami')
+team4  = Team.create(name: 'Jets',       city: 'New York')
+
+team5  = Team.create(name: 'Steelers',   city: 'Pittsburg')
+team6  = Team.create(name: 'Bengals',    city: 'Cincinnati')
+team7  = Team.create(name: 'Ravens',     city: 'Baltimore')
+team8  = Team.create(name: 'Browns',     city: 'Cleveland')
+
+team9  = Team.create(name: 'Colts',      city: 'Indianapolis')
+team10 = Team.create(name: 'Texans',     city: 'Houston')
+team11 = Team.create(name: 'Jaquars',    city: 'Jacksonville')
+team12 = Team.create(name: 'Titans',     city: 'Tennessee')
+
+team13 = Team.create(name: 'Broncos',    city: 'Denver')
+team14 = Team.create(name: 'Chiefs',     city: 'Kansas City')
+team15 = Team.create(name: 'Chargers',   city: 'San Diego')
+team16 = Team.create(name: 'Raiders',    city: 'Oakland')
+
+team17 = Team.create(name: 'Cowboys',    city: 'Dallas')
+team18 = Team.create(name: 'Eagles',     city: 'Philadelphia')
+team19 = Team.create(name: 'Giants',     city: 'New York')
+team20 = Team.create(name: 'Redskins',   city: 'Washington')
+
+team21 = Team.create(name: 'Packers',    city: 'Green Bay')
+team22 = Team.create(name: 'Lions',      city: 'Detroit')
+team23 = Team.create(name: 'Vikings',    city: 'Minnesota')
+team24 = Team.create(name: 'Bears',      city: 'Chicago')
+
+team25 = Team.create(name: 'Panthers',   city: 'Carolina')
+team26 = Team.create(name: 'Saints',     city: 'New Orleans')
+team27 = Team.create(name: 'Falcons',    city: 'Atlanta')
+team28 = Team.create(name: 'Buccaneers', city: 'Tampa Bay')
+
+team29 = Team.create(name: 'Seattle',    city: 'Seahawks')
+team30 = Team.create(name: 'Cardinals',  city: 'Arizona')
+team31 = Team.create(name: 'Rams',       city: 'St Louis')
