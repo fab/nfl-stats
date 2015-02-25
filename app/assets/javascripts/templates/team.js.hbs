@@ -1,3 +1,11 @@
 <div>
-  {{abbr}}: {{displayName}}
+  {{#each stat in model.teamStats}}
+    <div class='stat'>
+      <div class='rel'>
+        <div class='title'>{{stat.title}}</div>
+        <div class='value'>{{stat.value}}</div>
+        <div class='rank' >Rank: <strong>{{stat.rank}}</strong></div>
+      </div>
+    </div>
+  {{/each}}
 </div>
