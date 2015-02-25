@@ -1,5 +1,5 @@
 class TeamStatSerializer < ActiveModel::Serializer
-  attributes :title, :role, :value, :rank
+  attributes :id, :title, :role, :value, :rank
 
   def title
     object.stat.title
