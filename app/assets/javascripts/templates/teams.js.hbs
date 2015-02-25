@@ -1,6 +1,8 @@
-<h2>Teams</h2>
-<ul>
-  {{#each team in controller}}
-    <li>{{team.displayName}}</li>
-  {{/each}}
-</ul>
+<div class='dropdown'>{{view App.NavSelectView
+    content          = controller
+    optionLabelPath  = "content.displayName"
+    optionValuePath  = "content.id"
+    selectionBinding = "controller.selectedTeam"
+}}</div>
+
+{{outlet}}

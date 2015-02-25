@@ -3,4 +3,5 @@ App.Router.reopen
   rootUrl: '/'
 
 App.Router.map ->
-  @resource 'teams', path: '/'
+  @resource 'teams', path: '/', ->
+    @resource 'team', path: '/teams/:id'
