@@ -8,4 +8,8 @@ class TeamStatSerializer < ActiveModel::Serializer
   def role
     object.stat.role
   end
+
+  def rank
+    object.rank.ordinalize
+  end
 end
