@@ -1,6 +1,7 @@
 App.Team = DS.Model.extend
   name: DS.attr('string')
   city: DS.attr('string')
+  abbr: DS.attr('string')
   colorScheme: DS.attr()
   # teamStats: DS.hasMany('teamstat')
 

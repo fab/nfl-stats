@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20150220173711) do
   create_table "teams", force: true do |t|
     t.string   "name"
     t.string   "city"
+    t.string   "abbr"
     t.string   "color_scheme", array: true
     t.datetime "created_at"
     t.datetime "updated_at"
