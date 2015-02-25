@@ -38,3 +38,5 @@ gem 'spring',        group: :development
 
 gem 'ember-rails'
 gem 'ember-source'
+
+gem 'rails_12factor', group: :production
