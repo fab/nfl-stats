@@ -68,7 +68,9 @@ task :calculate_ranks => :environment do
   stats.each do |stat|
     puts "Stat name: #{stat.title}"
     puts
-    team_stats = TeamStat.where(stat: stat).order('value DESC')
+
+    sort_order = (stat.role == 'Offense' ? 'DESC' : 'ASC')
+    team_stats = TeamStat.where(stat: stat).order("value #{sort_order}")
 
     current_rank = 1
 
@@ -84,10 +86,10 @@ task :calculate_ranks => :environment do
       current = ts
       previous = team_stats[i - 1]
 
-      if current.value < previous.value
-        current.update_attribute(:rank, current_rank)
-      else
+      if current.value == previous.value
         current.update_attribute(:rank, previous.rank)
+      else
+        current.update_attribute(:rank, current_rank)
       end
 
       current_rank += 1
