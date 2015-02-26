@@ -61,3 +61,44 @@ task :parse_team_stats, [:filename] => :environment do |t, args|
 
   puts "Team stats imported into database."
 end
+
+desc "Calculate and update ranks for all team_stats in the database"
+task :calculate_ranks => :environment do
+  stats = Stat.all
+  stats.each do |stat|
+    puts "Stat name: #{stat.title}"
+    puts
+    team_stats = TeamStat.where(stat: stat).order('value DESC')
+
+    current_rank = 1
+
+    team_stats.each_with_index do |ts, i|
+
+      if i == 0
+        ts.update_attribute(:rank, current_rank)
+        current_rank += 1
+        puts "#{ts.team.name}: #{ts.value} with rank #{ts.rank}"
+        next
+      end
+
+      current = ts
+      previous = team_stats[i - 1]
+
+      if current.value < previous.value
+        current.update_attribute(:rank, current_rank)
+      else
+        current.update_attribute(:rank, previous.rank)
+      end
+
+      current_rank += 1
+
+      puts "#{ts.team.name}: #{ts.value} with rank #{ts.rank}"
+    end
+
+    puts
+    puts "__________________________________________"
+    puts
+  end
+
+  puts "Ranks updated for all team stats in database."
+end
