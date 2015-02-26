@@ -2,7 +2,7 @@ require 'json'
 require 'open-uri'
 require 'csv'
 
-desc "Fetches team_stats from an external API and creates a CSV of the data"
+desc "Fetches team stats from an external API and creates a CSV of the data"
 task :fetch_team_stats_for_csv do
 
   teams = ['ARI', 'ATL', 'BAL', 'BUF', 'CAR', 'CHI', 'CIN', 'CLE', 'DAL', 'DEN', 'DET', 'GB', 'HOU', 'IND', 'JAC', 'KC', 'MIA', 'MIN', 'NE', 'NO', 'NYG', 'NYJ', 'OAK', 'PHI', 'PIT', 'SD', 'SEA', 'SF', 'STL', 'TB', 'TEN', 'WAS']
@@ -45,7 +45,7 @@ task :fetch_team_stats_for_csv do
   puts "CSV of team stats generated."
 end
 
-desc "Parse a CSV of team_stats to create respective entries in the database"
+desc "Parse a CSV of team stats to create respective entries in the database"
 task :parse_team_stats, [:filename] => :environment do |t, args|
   CSV.foreach(args.filename, headers: true, header_converters: :symbol) do |row|
     team = Team.find_by(abbr: row[:team])
@@ -62,7 +62,7 @@ task :parse_team_stats, [:filename] => :environment do |t, args|
   puts "Team stats imported into database."
 end
 
-desc "Calculate and update ranks for all team_stats in the database"
+desc "Calculate and update ranks for all team stats in the database"
 task :calculate_ranks => :environment do
   stats = Stat.all
   stats.each do |stat|
