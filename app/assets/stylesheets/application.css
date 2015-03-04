@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require select2
  */
 
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
