@@ -13,6 +13,7 @@ task :fetch_team_stats_for_csv do
     teams.each do |team|
       source_url = "http://feeds.nfl.com/feeds-rs/teamSeasonQuickStats/#{team}/2014/REG.json"
       response = JSON.load(open(source_url))
+      team_stats    = response['teamSeasonStats'][0]
       offense_stats = response['teamSeasonStats'][0]['teamStatDetail']
       defense_stats = response['teamSeasonStats'][0]['opponentStatDetail']
 
@@ -21,15 +22,21 @@ task :fetch_team_stats_for_csv do
       row << team
 
       row << offense_stats['touchdownsTotal']
-      row << offense_stats['touchdownsPassing']
-      row << offense_stats['touchdownsRushing']
+      row << defense_stats['touchdownsTotal']
       row << offense_stats['totalPointsScored']
+      row << defense_stats['totalPointsScored']
+      row << team_stats['turnoverRatio']
+
+      row << offense_stats['touchdownsPassing']
+      row << offense_stats['passingYardsTotal']
+      row << offense_stats['touchdownsRushing']
+      row << offense_stats['rushingYardsTotal']
       row << offense_stats['offensiveYardsTotal']
 
-      row << defense_stats['touchdownsTotal']
       row << defense_stats['touchdownsPassing']
+      row << defense_stats['passingYardsTotal']
       row << defense_stats['touchdownsRushing']
-      row << defense_stats['totalPointsScored']
+      row << defense_stats['rushingYardsTotal']
       row << defense_stats['offensiveYardsTotal']
 
       row << offense_stats['touchdownsDefensive']
@@ -54,7 +61,7 @@ task :parse_team_stats, [:filename] => :environment do |t, args|
     row.each do |row_entry|
       next if row_entry[0] == :team
       stat = Stat.find(i)
-      TeamStat.create(team: team, stat: stat,  value: row_entry[1].to_i,   rank: rand(1..32))
+      TeamStat.create(team: team, stat: stat, value: row_entry[1].to_i, rank: rand(1..32))
       i += 1
     end
   end
