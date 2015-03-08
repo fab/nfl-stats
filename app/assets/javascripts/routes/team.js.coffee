@@ -11,8 +11,13 @@ App.TeamRoute = Ember.Route.extend
     )
 
   initializeStyles: (model) ->
+    @setBodyHeight()
     @setupSelect2()
     @styleWithTeamColors(model)
+
+  setBodyHeight: () ->
+    windowHeight = jQuery(window).height()
+    jQuery("body").height(windowHeight)
 
   setupSelect2: () ->
     jQuery(".ember-select").select2()

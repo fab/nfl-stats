@@ -21,7 +21,7 @@ body {
   margin: 0;
   font-family: 'Droid Sans', sans-serif;
   background: #ecf0f1;
-  height: 802px; /* TODO: Make sure to automatically generate this */
+  overflow: hidden;
 }
 
 header {
