@@ -20,25 +20,37 @@
 body {
   margin: 0;
   font-family: 'Droid Sans', sans-serif;
+  background: #ecf0f1;
+  height: 802px; /* TODO: Make sure to automatically generate this */
 }
 
 header {
   text-align: center;
 }
 
+.ember-application,
+.ember-view,
+.team-view {
+  height: 100%
+}
+
 .dropdown {
   text-align: center;
-  margin-bottom: 25px;
+  height: 10%;
 }
 
 .dropdown select {
   font-size: 20px;
 }
 
+.team-stats {
+  height: 90%;
+}
+
 .stat {
   display: block;
   width: 20%;
-  height: 145px;
+  height: 25%;
   float: left;
   background: #E6BE8A;
   text-transform: uppercase;
@@ -67,7 +79,7 @@ header {
 
 .value {
   position: absolute;
-  margin: 46px 0;
+  top: 33%;
   width: 100%;
   font-size: 45px;
   text-align: center
