@@ -29,8 +29,7 @@ header {
 }
 
 .ember-application,
-.ember-view,
-.team-view {
+.ember-view {
   height: 100%
 }
 
