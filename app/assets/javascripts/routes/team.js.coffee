@@ -21,7 +21,7 @@ App.TeamRoute = Ember.Route.extend
 
   setupSelect2: () ->
     jQuery(".ember-select").select2()
-    jQuery(".select2-container").width(200)
+    jQuery(".select2-container").width(220)
     jQuery('.select2-container').css('top', '30%')
 
   styleWithTeamColors: (model) ->
