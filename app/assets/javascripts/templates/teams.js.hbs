@@ -1,8 +1,24 @@
-<div class='dropdown'>{{view App.NavSelectView
+<header>
+  <div id="title">
+    2014 NFL Regular Season Team Stats
+  </div>
+  <div id="buttons">
+    <div id="about">
+      Built by <a href='http://twitter.com/fabsays' target='_blank'>@fabsays</a>
+    </div>
+    <div id="twitter">
+      <iframe src="https://platform.twitter.com/widgets/tweet_button.html?url=http://nflstats.herokuapp.com&text=NFL%20Team%20Stats&via=fabsays&count=none&hashtags=NFL" scrolling="no" frameborder="0" style="width:60px; height:20px;" allowtransparency="true"></iframe>
+    </div>
+    <div id="facebook">
+      <iframe src="//www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fnflstats.herokuapp.com&amp;layout=button" scrolling="no" frameborder="0" style="width:60px; height:20px;" allowtransparency="true"></iframe>
+    </div>
+  </div>
+  <div class='dropdown'>{{view App.NavSelectView
     content          = controller
     optionLabelPath  = "content.displayName"
     optionValuePath  = "content.id"
-    selectionBinding = "controller.selectedTeam"
-}}</div>
+    selectionBinding = "controller.selectedTeam"}}
+  </div>
+</header>
 
 {{outlet}}
