@@ -4,7 +4,10 @@
       <div class='rel'>
         <div class='title'>{{stat.title}}</div>
         <div class='value'>{{stat.value}}</div>
-        <div class='rank' >Rank: <strong>{{stat.rank}}</strong></div>
+        <div class='rank'>
+          <div {{bind-attr class="stat.highOrLow"}}>
+            Rank: <strong> {{stat.rank}}</strong></div>
+          </div>
       </div>
     </div>
   {{/each}}
