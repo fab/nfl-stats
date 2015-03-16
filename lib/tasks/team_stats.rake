@@ -111,3 +111,10 @@ task :calculate_ranks => :environment do
 
   puts "Ranks updated for all team stats in database."
 end
+
+desc 'This rebuilds the development db'
+task :rebuild_dev do
+  Rake::Task["db:reset"].invoke
+  Rake::Task["parse_team_stats"].invoke("team_stats.csv")
+  Rake::Task["calculate_ranks"].invoke
+end
