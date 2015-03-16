@@ -27,7 +27,7 @@ team2  = Team.create(name: 'Bills',      city: 'Buffalo',       abbr: 'BUF', col
 team3  = Team.create(name: 'Dolphins',   city: 'Miami',         abbr: 'MIA', color_scheme: ['#008D97', '#F5811F', '#FFFFFF'])
 team4  = Team.create(name: 'Jets',       city: 'New York',      abbr: 'NYJ', color_scheme: ['#0C371D', '#FFFFFF', '#000000'])
 
-team5  = Team.create(name: 'Steelers',   city: 'Pittsburg',     abbr: 'PIT', color_scheme: ['#000000', '#F2C800', '#FFFFFF'])
+team5  = Team.create(name: 'Steelers',   city: 'Pittsburgh',    abbr: 'PIT', color_scheme: ['#000000', '#F2C800', '#FFFFFF'])
 team6  = Team.create(name: 'Bengals',    city: 'Cincinnati',    abbr: 'CIN', color_scheme: ['#000000', '#FB4F14', '#FFFFFF'])
 team7  = Team.create(name: 'Ravens',     city: 'Baltimore',     abbr: 'BAL', color_scheme: ['#280353', '#000000', '#D0B240'])
 team8  = Team.create(name: 'Browns',     city: 'Cleveland',     abbr: 'CLE', color_scheme: ['#26201E', '#E34912', '#FFFFFF'])
