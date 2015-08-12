@@ -1,0 +1,177 @@
+{
+"team": {
+"id": 1,
+"name": "Patriots",
+"city": "New England",
+"abbr": "NE",
+"color_scheme": [
+"#0D254C",
+"#D6D6D6",
+"#C80815"
+],
+"team_stat_ids": [
+361,
+362,
+363,
+364,
+365,
+366,
+367,
+368,
+369,
+370,
+371,
+372,
+373,
+374,
+375,
+376,
+377,
+378,
+379,
+380
+]
+},
+"team_stats": [
+{
+"id": 361,
+"title": "Total TD Scored",
+"role": "Offense",
+"value": 52,
+"rank": "6th"
+},
+{
+"id": 362,
+"title": "Total TD Allowed",
+"role": "Defense",
+"value": 32,
+"rank": "5th"
+},
+{
+"id": 363,
+"title": "Total Points Scored",
+"role": "Offense",
+"value": 468,
+"rank": "4th"
+},
+{
+"id": 364,
+"title": "Total Points Allowed",
+"role": "Defense",
+"value": 313,
+"rank": "8th"
+},
+{
+"id": 365,
+"title": "Turnover Margin",
+"role": "Offense",
+"value": 12,
+"rank": "2nd"
+},
+{
+"id": 366,
+"title": "Pass TD Scored",
+"role": "Offense",
+"value": 34,
+"rank": "5th"
+},
+{
+"id": 367,
+"title": "Pass Yards Gained",
+"role": "Offense",
+"value": 4291,
+"rank": "11th"
+},
+{
+"id": 368,
+"title": "Rush TD Scored",
+"role": "Offense",
+"value": 13,
+"rank": "12th"
+},
+{
+"id": 369,
+"title": "Rush Yards Gained",
+"role": "Offense",
+"value": 1727,
+"rank": "18th"
+},
+{
+"id": 370,
+"title": "Total Yards Gained",
+"role": "Offense",
+"value": 5848,
+"rank": "11th"
+},
+{
+"id": 371,
+"title": "Pass TD Allowed",
+"role": "Defense",
+"value": 24,
+"rank": "12th"
+},
+{
+"id": 372,
+"title": "Pass Yards Allowed",
+"role": "Defense",
+"value": 4119,
+"rank": "18th"
+},
+{
+"id": 373,
+"title": "Rush TD Allowed",
+"role": "Defense",
+"value": 6,
+"rank": "2nd"
+},
+{
+"id": 374,
+"title": "Rush Yards Allowed",
+"role": "Defense",
+"value": 1669,
+"rank": "9th"
+},
+{
+"id": 375,
+"title": "Total Yards Allowed",
+"role": "Defense",
+"value": 5506,
+"rank": "13th"
+},
+{
+"id": 376,
+"title": "Defensive TD Scored",
+"role": "Offense",
+"value": 4,
+"rank": "5th"
+},
+{
+"id": 377,
+"title": "Defensive TD Allowed",
+"role": "Defense",
+"value": 2,
+"rank": "10th"
+},
+{
+"id": 378,
+"title": "Return TD Scored",
+"role": "Offense",
+"value": 1,
+"rank": "6th"
+},
+{
+"id": 379,
+"title": "Return TD Allowed",
+"role": "Defense",
+"value": 0,
+"rank": "1st"
+},
+{
+"id": 380,
+"title": "Field Goals Scored",
+"role": "Offense",
+"value": 35,
+"rank": "1st"
+}
+]
+}

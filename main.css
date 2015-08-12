@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #ecf0f1;
+  overflow: hidden;
+}
+
+header {
+  height: 10%;
+}
+
+#title {
+  position: relative;
+  top: 30%;
+  margin-left: 6%;
+  font-size: 20px;
+  float: left;
+  line-height: 28px;
+}
+
+#buttons {
+  position: relative;
+  top: 30%;
+  margin-right: 5%;
+  font-size: 20px;
+  float: right;
+  line-height: 28px
+}
+
+#about {
+  float: left;
+}
+
+a {
+  color: #55ACEE;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #4489be;
+}
+
+#twitter {
+  float: left;
+  margin-left: 140px;
+  margin-top: 5px;
+}
+
+#facebook {
+  float: left;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.dropdown {
+  text-align: center;
+  height: 100%;
+  width: 250px;
+  margin: 0 auto;
+}
+
+.dropdown select {
+  font-size: 20px;
+}
+
+.select2-container {
+  top: 30%;
+}
+
+.team-stats {
+  height: 90%;
+}
+
+.stat {
+  display: block;
+  width: 20%;
+  height: 25%;
+  float: left;
+  background: #34495e;
+  text-transform: uppercase;
+  color: #ecf0f1;
+  border: 1px solid #2c3e50;
+  box-sizing: border-box;
+}
+
+.rel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* Refactor common styles below to .rel div */
+
+.title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  line-height: 70px;
+  text-align: center;
+  font-size: 1.4vw;
+}
+
+.value {
+  position: absolute;
+  top: 29%;
+  width: 100%;
+  font-size: 65px;
+  text-align: center
+}
+
+.rank {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 60px;
+  text-align: center;
+  font-size: 1.4vw;
+}
+
+.rank .high {
+  color: #2ecc71;
+}
+
+.rank .medium {
+  color: #f1c40f;
+}
+
+.rank .low {
+  color: #e74c3c;
+}

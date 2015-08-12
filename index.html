@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NFL Team Stats</title>
+    <meta charset="utf-8">
+    <link href="main.css" rel="stylesheet" media="all">
+    <script src="https://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="title">
+        NFL Team Stats for 2014 Regular Season
+      </div>
+      <div id="buttons">
+        <div id="about">
+          Built by <a href='https://twitter.com/fabsays' target='_blank'>@fabsays</a>
+        </div>
+        <div id="twitter">
+          <iframe src="https://platform.twitter.com/widgets/tweet_button.html?url=http://nflstats.herokuapp.com&text=NFL%20Team%20Stats&via=fabsays&count=none&hashtags=NFL" scrolling="no" frameborder="0" style="width:60px; height:20px;" allowtransparency="true"></iframe>
+        </div>
+        <div id="facebook">
+          <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fnflstats.herokuapp.com&amp;layout=button" scrolling="no" frameborder="0" style="width:60px; height:20px;" allowtransparency="true"></iframe>
+        </div>
+      </div>
+      <div class='dropdown'>
+        <select>
+          <option value="ARI">Arizona Cardinals</option>
+          <option value="ATL">Atlanta Falcons</option>
+          <option value="BAL">Baltimore Ravens</option>
+          <option value="BUF">Buffalo Bills</option>
+          <option value="CAR">Carolina Panthers</option>
+          <option value="CHI">Chicago Bears</option>
+          <option value="CIN">Cincinnati Bengals</option>
+          <option value="CLE">Cleveland Browns</option>
+          <option value="DAL">Dallas Cowboys</option>
+          <option value="DEN">Denver Broncos</option>
+          <option value="DET">Detroit Lions</option>
+          <option value="GB">Green Bay Packers</option>
+          <option value="HOU">Houston Texans</option>
+          <option value="IND">Indianapolis Colts</option>
+          <option value="JAC">Jacksonville Jaquars</option>
+          <option value="KC">Kansas City Chiefs</option>
+          <option value="MIA">Miami Dolphins</option>
+          <option value="MIN">Minnesota Vikings</option>
+          <option value="NE">New England Patriots</option>
+          <option value="NO">New Orleans Saints</option>
+          <option value="NYG">New York Giants</option>
+          <option value="NYJ">New York Jets</option>
+          <option value="OAK">Oakland Raiders</option>
+          <option value="PHI">Philadelphia Eagles</option>
+          <option value="PIT">Pittsburgh Steelers</option>
+          <option value="SD">San Diego Chargers</option>
+          <option value="SF">San Francisco 49ers</option>
+          <option value="SEA">Seattle Seahawks</option>
+          <option value="STL">St Louis Rams</option>
+          <option value="TB">Tampa Bay Buccaneers</option>
+          <option value="TEN">Tennessee Titans</option>
+          <option value="WAS">Washington Redskins</option>
+        </select>
+      </div>
+    </header>
+    <div class="team-stats">
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Total TD Scored</div>
+          <div class="value">32</div>
+          <div class="rank">
+            <div class="medium">Rank: <strong>26th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Total TD Allowed</div>
+          <div class="value">32</div>
+          <div class="rank">
+            <div class="high">Rank: <strong>5th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Total Points Scored</div>
+          <div class="value">310</div>
+          <div class="rank">
+            <div class="medium">Rank: <strong>24th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Total Points Allowed</div>
+          <div class="value">299</div>
+          <div class="rank">
+            <div class="high">Rank: <strong>5th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Turnover Margin</div>
+          <div class="value">8</div>
+          <div class="rank">
+            <div class="high">Rank: <strong>5th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Pass TD Scored</div>
+          <div class="value">21</div>
+          <div class="rank">
+            <div class="">Rank: <strong>20th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Pass Yards Gained</div>
+          <div class="value">3990</div>
+          <div class="rank">
+            <div class="">Rank: <strong>16th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Rush TD Scored</div>
+          <div class="value">6</div>
+          <div class="rank">
+            <div class="low">Rank: <strong>29th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Rush Yards Gained</div>
+          <div class="value">1308</div>
+          <div class="rank">
+            <div class="low">Rank: <strong>31st</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Total Yards Gained</div>
+          <div class="value">5116</div>
+          <div class="rank">
+            <div class="medium">Rank: <strong>24th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Pass TD Allowed</div>
+          <div class="value">22</div>
+          <div class="rank">
+            <div class="">Rank: <strong>6th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Pass Yards Allowed</div>
+          <div class="value">4396</div>
+          <div class="rank">
+            <div class="low">Rank: <strong>29th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Rush TD Allowed</div>
+          <div class="value">9</div>
+          <div class="rank">
+            <div class="">Rank: <strong>8th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Rush Yards Allowed</div>
+          <div class="value">1739</div>
+          <div class="rank">
+            <div class="">Rank: <strong>13th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Total Yards Allowed</div>
+          <div class="value">5891</div>
+          <div class="rank">
+            <div class="medium">Rank: <strong>24th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Defensive TD Scored</div>
+          <div class="value">4</div>
+          <div class="rank">
+            <div class="high">Rank: <strong>5th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Defensive TD Allowed</div>
+          <div class="value">1</div>
+          <div class="rank">
+            <div class="high">Rank: <strong>5th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Return TD Scored</div>
+          <div class="value">1</div>
+          <div class="rank">
+            <div class="">Rank: <strong>6th</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Return TD Allowed</div>
+          <div class="value">0</div>
+          <div class="rank">
+            <div class="high">Rank: <strong>1st</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="rel">
+          <div class="title">Field Goals Scored</div>
+          <div class="value">29</div>
+          <div class="rank">
+            <div class="">Rank: <strong>8th</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
