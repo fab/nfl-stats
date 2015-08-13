@@ -13,7 +13,7 @@ function setEventListenerOnSelect() {
 }
 
 function updateURL(teamAbbr) {
-  window.history.pushState('', 'NFL Team Stats', '/#/' + teamAbbr);
+  window.location.hash = "/" + teamAbbr
 }
 
 function filename(teamAbbr) {
