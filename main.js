@@ -3,13 +3,15 @@ $(document).ready(function() {
   var windowHeight = $(window).height()
   $('body').height(windowHeight)
 
-  // setup select2
-  $('select').select2({ width: '220px' }).on('select2:select', function(e) {
-    console.log("New team ID: " + e.params.data.id);
-    var filename = 'data/' + e.params.data.id + '.json'
+  // make the dropdown a select element and update stats if team is changed
+  $('select').select2({ width: '220px' }).on('change', function(e) {
+    var new_team_id = $(this).val()
+    var filename = 'data/' + new_team_id + '.json'
+
+    // update url
+    window.history.pushState('', 'NFL Team Stats', '/#/' + new_team_id)
 
     $.getJSON(filename, function(data) {
-      console.log(data.team.name);
       var team_stat_cells = $('.stat')
       for (var i = 0; i < data.team_stats.length; i++) {
         var team_stat = data.team_stats[i];
@@ -32,5 +34,22 @@ $(document).ready(function() {
     });
   });
 
-  $("select").val("ARI").trigger("change")
+  // on initial request load stats for team name in URL
+  var team_name_in_url = location.hash.slice(2).toUpperCase() || 'ARI';
+  $("select").val(team_name_in_url).trigger("change");
+
+  // if the user changes the URL then we update the stats for the desired team
+  window.onhashchange = locationHashChanged;
+
+  function locationHashChanged() {
+    var team_name_in_url = location.hash.slice(2).toUpperCase() || 'ARI';
+    var filename = 'data/' + team_name_in_url + '.json'
+
+    // check if there is a team for that name
+    $.ajax({
+      url: filename,
+      success: function() { $("select").val(team_name_in_url).trigger("change"); },
+      error: function() { $("select").val('ARI').trigger("change"); }
+    });
+  }
 });
