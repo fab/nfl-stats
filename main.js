@@ -17,7 +17,7 @@ function updateURL(teamAbbr) {
 }
 
 function filename(teamAbbr) {
-  return '/data/' + teamAbbr + '.json';
+  return 'data/' + teamAbbr + '.json';
 }
 
 function teamAbbrInURL() {
