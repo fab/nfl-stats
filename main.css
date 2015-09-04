@@ -134,7 +134,7 @@ a:hover, a:focus {
   color: #e74c3c;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-device-width: 480px) {
   #twitter {
     margin-left: 40px;
   }
