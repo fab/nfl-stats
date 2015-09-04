@@ -133,3 +133,9 @@ a:hover, a:focus {
 .rank .low {
   color: #e74c3c;
 }
+
+@media screen and (max-width: 480px) {
+  #twitter {
+    margin-left: 40px;
+  }
+}
